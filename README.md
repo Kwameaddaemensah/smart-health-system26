@@ -1,1 +1,1 @@
-# Final_year_project-SMART_HEALTH_SYSTEM
+# smart-health-system
