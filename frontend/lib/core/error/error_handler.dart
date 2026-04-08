@@ -51,11 +51,11 @@ abstract final class ErrorHandler {
 
     return switch (code) {
       401 => const UnauthorizedFailure(),
-      403 => ServerFailure(
+      403 => const ServerFailure(
                message: 'You do not have permission to do that.',
                statusCode: 403,
              ),
-      404 => ServerFailure(
+      404 => const ServerFailure(
                message: 'The requested resource was not found.',
                statusCode: 404,
              ),
