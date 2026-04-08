@@ -1,0 +1,110 @@
+# frontend/pubspec.yaml
+
+name: smart_health_care
+description: Smart Health Care — AI-guided health platform for Android and Web.
+publish_to: none
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # ── State management ────────────────────────────────────────────
+  # Riverpod: compile-safe providers, AsyncValue, autoDispose
+  flutter_riverpod: 2.5.1
+  riverpod_annotation: 2.3.5
+
+  # ── Navigation ──────────────────────────────────────────────────
+  # GoRouter: declarative routing with ShellRoutes for bottom nav
+  go_router: 14.2.0
+
+  # ── Networking ──────────────────────────────────────────────────
+  # Dio: HTTP client. Supports interceptors and streaming (for AI chat)
+  dio: 5.4.3
+
+  # ── Data models ─────────────────────────────────────────────────
+  # Freezed: generates immutable classes with copyWith, equality, JSON
+  freezed_annotation: 2.4.1
+  json_annotation: 4.9.0
+
+  # ── Storage ─────────────────────────────────────────────────────
+  # SecureStorage: AES Keystore (Android) / Keychain (iOS) for JWT tokens
+  flutter_secure_storage: 9.2.2
+  # SharedPreferences: non-sensitive key-value (theme, onboarding flag)
+  shared_preferences: 2.3.2
+  # Hive: fast encrypted offline cache for appointments, doctor list
+  hive_flutter: 1.1.0
+
+  # ── Firebase ────────────────────────────────────────────────────
+  firebase_core: 3.6.0
+  firebase_analytics: 11.3.0
+  firebase_messaging: 15.1.5
+
+  # ── Maps & Location ─────────────────────────────────────────────
+  google_maps_flutter: 2.9.0
+  geolocator: 13.0.2
+
+  # ── UI utilities ────────────────────────────────────────────────
+  # shimmer: skeleton loading placeholders
+  shimmer: 3.0.0
+  # cached_network_image: efficient remote image loading with cache
+  cached_network_image: 3.4.1
+  # file_picker: record upload (PDF, JPG, PNG)
+  file_picker: 8.1.2
+  # url_launcher: open maps app from facility screen
+  url_launcher: 6.3.1
+  # intl: date/time formatting, locale support
+  intl: 0.19.0
+  # connectivity_plus: detect offline state before API calls
+  connectivity_plus: 6.1.0
+  # permission_handler: request location permission
+  permission_handler: 11.3.1
+
+  # ── Functional helpers ──────────────────────────────────────────
+  # dartz: Either<Failure, T> in repositories
+  dartz: 0.10.1
+  # uuid: generate session IDs for AI chat
+  uuid: 4.5.1
+  # equatable: value equality for non-Freezed classes
+  equatable: 2.0.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # Code generation
+  build_runner: 2.4.13
+  freezed: 2.5.7
+  json_serializable: 6.8.0
+  riverpod_generator: 2.4.3
+
+  # Testing
+  mocktail: 1.0.4
+  flutter_lints: 4.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Inter-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Inter-SemiBold.ttf
+          weight: 600
+
+    - family: Merriweather
+      fonts:
+        - asset: assets/fonts/Merriweather-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Merriweather-Bold.ttf
+          weight: 700
