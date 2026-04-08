@@ -1,1 +1,42 @@
+# frontend/analysis_options.yaml
+
 include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  exclude:
+    # Never lint generated files — build_runner creates these
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+
+  errors:
+    # These are bugs in production Flutter code, treat as errors not warnings
+    missing_return: error
+    dead_code: error
+    unused_import: error
+    unnecessary_null_comparison: error
+
+  language:
+    strict-casts: true       # no implicit dynamic casting
+    strict-inference: true   # type must be inferrable
+    strict-raw-types: true   # no bare List, Map without type params
+
+linter:
+  rules:
+    # Code quality
+    always_declare_return_types: true
+    avoid_print: true             # use a proper logger, not print()
+    avoid_empty_else: true
+    avoid_redundant_argument_values: true
+    cancel_subscriptions: true    # always cancel StreamSubscriptions
+    close_sinks: true             # always close StreamSinks
+
+    # Flutter-specific
+    use_key_in_widget_constructors: true   # every widget needs a key param
+    sized_box_for_whitespace: true         # SizedBox(height:8) not Container
+    prefer_const_constructors: true
+    prefer_const_widgets: true
+
+    # Style
+    prefer_single_quotes: true
+    unnecessary_this: false
+    sort_constructors_first: true
