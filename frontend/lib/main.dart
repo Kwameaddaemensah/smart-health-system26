@@ -17,7 +17,7 @@ void main() async {
   // Required before any async work in main()
   WidgetsFlutterBinding.ensureInitialized();
 
-  // Initialise Firebase (Analytics + Messaging)
+  // Initialize Firebase (Analytics + Messaging)
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );

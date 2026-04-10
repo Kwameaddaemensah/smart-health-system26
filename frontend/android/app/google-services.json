@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "216593680824",
+    "project_id": "smart-health-care-26",
+    "storage_bucket": "smart-health-care-26.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:216593680824:android:60af35a1bdf08ab711274d",
+        "android_client_info": {
+          "package_name": "com.smarthealthcare.smart_health_care"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOTjw087tGl-9I75Eu7kO4zHIh-jO0F4U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

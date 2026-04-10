@@ -117,7 +117,7 @@ abstract final class AppTheme {
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
           foregroundColor: AppColors.teal600,
-          side: const BorderSide(color: AppColors.teal600, width: 1),
+          side: const BorderSide(color: AppColors.teal600),
           minimumSize: const Size.fromHeight(AppSizes.buttonHeightMd),
           padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
           shape: RoundedRectangleBorder(
@@ -151,11 +151,11 @@ abstract final class AppTheme {
         // Default border (no focus)
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(AppSizes.radiusMd),
-          borderSide: const BorderSide(color: AppColors.grey200, width: 1),
+          borderSide: const BorderSide(color: AppColors.grey200),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(AppSizes.radiusMd),
-          borderSide: const BorderSide(color: AppColors.grey200, width: 1),
+          borderSide: const BorderSide(color: AppColors.grey200),
         ),
         // Teal glow on focus
         focusedBorder: OutlineInputBorder(
@@ -165,7 +165,7 @@ abstract final class AppTheme {
         // Red border on error
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(AppSizes.radiusMd),
-          borderSide: const BorderSide(color: AppColors.red500, width: 1),
+          borderSide: const BorderSide(color: AppColors.red500),
         ),
         focusedErrorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(AppSizes.radiusMd),
@@ -173,7 +173,7 @@ abstract final class AppTheme {
         ),
         disabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(AppSizes.radiusMd),
-          borderSide: const BorderSide(color: AppColors.grey100, width: 1),
+          borderSide: const BorderSide(color: AppColors.grey100),
         ),
 
         labelStyle: AppTextStyles.bodyMedium.copyWith(
@@ -192,7 +192,7 @@ abstract final class AppTheme {
       ),
 
       // ── Card ──────────────────────────────────────────────────
-      cardTheme: CardTheme(
+      cardTheme: CardThemeData(
         color: Colors.white,
         elevation: 0,
         shape: RoundedRectangleBorder(
@@ -236,7 +236,7 @@ abstract final class AppTheme {
       ),
 
       // ── Dialog / Bottom sheet ─────────────────────────────────
-      dialogTheme: DialogTheme(
+      dialogTheme: DialogThemeData(
         backgroundColor: Colors.white,
         elevation: 0,
         shape: RoundedRectangleBorder(
