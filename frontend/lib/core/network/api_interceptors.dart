@@ -130,7 +130,7 @@ class AuthInterceptor extends Interceptor {
     // Using a fresh Dio instance and not the intercepted one —
     // to avoid the interceptor calling itself recursively
     final dio = Dio(BaseOptions(baseUrl: ApiConstants.baseUrl));
-    final response = await dio.post(
+    final response = await dio.post<dynamic>(
       ApiConstants.tokenRefresh,
       data: {'refresh': refreshToken},
     );
