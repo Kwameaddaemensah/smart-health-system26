@@ -14,7 +14,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 // ── Provider ──────────────────────────────────────────────────────────
 // Singleton — one instance for the entire app
-final secureStorageProvide = Provider<SecureStorage>(
+final secureStorageProvider = Provider<SecureStorage>(
   (ref) => SecureStorage(),
 );
 
